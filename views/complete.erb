@@ -46,30 +46,30 @@
         <% tel = params['tel'] %>
         <% content = params['content'] %>
             <table border="1">
-            　<tr>
-            　　<th>会社名</th>
-            　　<th><%= company %></th>
-            　</tr>
-            　<tr>
-            　　<td>氏名</td>
-            　　<td><%= name %></td>
-            　</tr>
-            　<tr>
-            　　<td>メール</td>
-            　　<td><%= mail %></td>
-            　</tr>
-            　<tr>
-            　　<td>電話番号</td>
-            　　<td><%= tel %></td>
-            　</tr>
-            　<tr>
-            　　<td>内容</td>
-            　　<td><%= content %></td>
-            　</tr>
+                <tr>
+                    <th>会社名</th>
+                    <th><%= company %></th>
+                </tr>
+                <tr>
+                    <td>氏名</td>
+                    <td><%= name %></td>
+                </tr>
+                <tr>
+                    <td>メール</td>
+                    <td><%= mail %></td>
+                </tr>
+                <tr>
+                    <td>電話番号</td>
+                    <td><%= tel %></td>
+                </tr>
+                <tr>
+                    <td>内容</td>
+                    <td><%= content.gsub(/\r\n|\r|\n/, "<br>") %></td>
+                </tr>
             </table>
         <div class="text-center mb-4">
             <!-- 「戻る」ボタンを緑色にする設定を追加 -->
-            <a href="contact.html" class="btn  btn-success" action="/">戻る</a>
+            <a href="/" class="btn  btn-success">戻る</a>
         </div>
     </div>
     <footer class="text-center pt-3 border-top">
